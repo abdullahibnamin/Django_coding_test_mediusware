@@ -1,1 +1,1 @@
-# Django_coding_test_mediusware
+# Django Coding Test ReactJS (Mediusware)
