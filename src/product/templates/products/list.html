@@ -41,6 +41,7 @@
             </div>
         </form>
 
+
         <div class="card-body">
             <div class="table-response">
                 <table class="table">
@@ -55,10 +56,14 @@
                     </thead>
 
                     <tbody>
+
+                    {% for ctxproduct in ctxproducts %}
+                    
                     <tr>
-                        <td>1</td>
-                        <td>T-Shirt <br> Created at : 25-Aug-2020</td>
-                        <td>Quality product in low cost</td>
+                        
+                        <td>{{ ctxproduct.id }}</td>
+                        <td>{{ ctxproduct.title }} <br> Created at : {{ ctxproduct.created_at }}</td>
+                        <td>{{ ctxproduct.variant_title }}</td>
                         <td>
                             <dl class="row mb-0" style="height: 80px; overflow: hidden" id="variant">
                                 <dt class="col-sm-3 pb-0">
@@ -108,7 +113,9 @@
                         </td>
                     </tr>
                     </tbody>
-
+               
+                    {% endfor %}
+               
                 </table>
             </div>
 
